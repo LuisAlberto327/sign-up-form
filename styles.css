@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('./fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('./fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+  font-family: "Tillana", system-ui;
+  font-style: normal;
+}
+
+body{
+  font-size: 2.5rem;
+  display: flex;
+}
+
+.image{
+  background-image: url("./images/horror.jpg");
+  height: 100vh;
+  min-height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  flex: 1;
+  box-shadow:inset 0px 0px 11px 4px black;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.odin-container{
+  background: black;
+  opacity: 50%;
+  display: flex;
+  width: 100%;
+  height: 20%;
+  align-items: center;
+  position: relative;
+  top: 40px;
+}
+
+.odin-logo{
+  background-image: url("./images/odin.png");
+  flex: 1;
+  height: 100px;
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.odin-text{
+  flex: 1;
+  font-size: 3rem;
+  color: white;
+  font-family: 'norsebold';
+
+}
+
+.sign-in-container{
+  display: flex;
+  justify-content: center;
+  font-size: calc(1vw + 16px);
+  gap: 5px;
+}
+
+.sign-in-link a{
+  text-decoration: none;
+  font-weight: bold;
+  color: red;
+}
+
+.credits-container{
+  color: white;
+  font-size: calc(.5vw + 16px);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.credits-container{
+  position: relative;
+  bottom: 1%;
+}
+
+.credits-container a{
+  color: red;
+  text-decoration: none;
+}
+
+.right{
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1.3;
+  box-shadow:inset 0px 0px 11px 4px black;
+}
+
+.header{
+  flex: 1.3;
+  align-content: center;
+  justify-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text{
+  font-family: "Rubik Glitch", system-ui;
+  width: 80%;
+  height: 80%;
+  font-size: calc(3vw + 20px);
+  text-align: center;
+  align-content: center;
+}
+
+.sign-up{
+  font-weight: bold;
+  position: relative;
+  bottom: 1%;
+  font-size: calc(1.5vw + 16px);
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  align-content: center;
+  justify-items: center;
+  width: 100%;
+}
+
+.body{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.body-content{
+  width: 85%;
+  height: 90%;
+  font-size: calc(.8vw + 12px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  column-gap: 7%;
+  row-gap: 6%;
+}
+
+.divisions{
+  width: 40%;
+  height: 30%;
+  column-gap: 5%;
+}
+
+.divisions label{
+  margin-bottom: 50px;
+}
+
+.inputs{
+  position: relative;
+  margin-top: .5%;
+}
+
+input{
+  box-sizing: border-box;
+  border-radius: 7px;
+  border: solid #E5E7EB;
+  width: 75%;
+}
+
+.inputs span{
+  position: relative;
+  left: 6%;
+}
+
+input:focus{
+  outline: none;
+  border: 2px solid blue;
+  box-shadow: 0 0 5px 3px lightblue;
+}
+
+input:valid{
+  background: white;
+  border: 2px outset green;
+  box-shadow: 0 0 5px .5px green;
+}
+
+input:valid + span::before {
+  content: "✓";
+  color: green;
+  position: absolute;
+  top: 15%;
+}
+
+input:invalid:not(:placeholder-shown){
+  border: 2px outset red;
+  box-shadow: 0 0 5px .5px red;
+}
+
+.inputs:has( > input[type="password"]:invalid:not(:placeholder-shown)) + div::after {
+  content:  "At least 5 characters";
+  color: red;
+  position: relative;
+  font-size: clamp(calc(.40vw + 12px), calc(.43vw + 12px), calc(.53vw + 0px));
+}
+
+
+input:invalid:not(:placeholder-shown) + span::after {
+  content: "✖";
+  color: red;
+  position: absolute;
+  top: 15%;
+}
+
+.inputs:has(> input[type="email"]:invalid:not(:placeholder-shown)) + div::after{
+  content: "Please, enter a valid email";
+  color: red;
+  position: relative;
+  top: 15%;
+  font-size: clamp(calc(.40vw + 12px), calc(.43vw + 12px), calc(.53vw + 0px));
+}
+
+.footer{
+  flex: .5;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-content{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+button{
+  font-size: calc(1.5vw + 10px);
+  background: red;
+  color: white;
+  border-radius: 40px;
+  width: 40%;
+  cursor: pointer;
+}
